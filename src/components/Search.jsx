@@ -3,7 +3,7 @@ import { FaSearch } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
-const FormStyle = styled.div`
+const FormStyle = styled.form`
   margin: 0rem 10rem;
 
   div {
@@ -35,16 +35,16 @@ function Search() {
   const submitHandler = (e) => {
     e.preventDefault();
     navigate("/searched/" + input);
-    // console.log("hey");
+    console.log("hey", input);
   };
   return (
     <FormStyle onSubmit={submitHandler}>
       <div>
         <FaSearch />
         <input
+          onChange={(e) => setInput(e.target.value)}
           type="text"
           value={input}
-          onChange={(e) => setInput(e.target.value)}
         />
       </div>
     </FormStyle>
