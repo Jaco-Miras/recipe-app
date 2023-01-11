@@ -17,13 +17,13 @@ const FormStyle = styled.form`
     font-size: 1.5rem;
     padding: 1rem 3rem;
     width: 100%;
-    border-radius: 1rem;
+    border-radius: 2rem;
     outline: none;
   }
   svg {
     position: absolute;
     top: 50%;
-    left: 0%;
+    left: 1%;
     transform: translate(100%, -50%);
   }
 `;
